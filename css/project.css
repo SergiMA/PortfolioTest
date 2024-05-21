@@ -1,0 +1,143 @@
+/* Project information - Global */
+body.background-image-hacking-ops {
+    background-size: cover;
+}
+
+body.background-image-syne {
+    background-size: cover;
+}
+
+body.background-image-destroy-the-mothership {
+    background-size: cover;
+}
+
+body.background-image-boreas {
+    background-size: cover;
+}
+
+body.background-image-nonies-party {
+    background-size: cover;
+}
+
+body.background-image-progression-from-hell {
+    background-size: cover
+}
+
+body.background-image-spacecraft-wreck {
+    background-size: cover;
+}
+
+/* Project information - Header */
+#project-header {
+    display: flex;
+    flex-flow: column wrap;
+    
+    width: 370px;
+    margin: 0 auto 0 auto;
+}
+
+#project-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+    /* max-width: 1000px; */
+    /* margin: 100px auto 0 auto; */
+
+
+    /* border-radius: 20px; */
+    background-color: white;
+}
+
+#project-info>h1 {
+    text-align: center;
+    margin: 0.67em 60px;
+}
+
+#project-header>#project-state>.project-state-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+ 
+    font-size: 15px;
+}
+
+.project-state-row>.project-state-row-heading {
+    width: 140px;
+}
+
+.project-state-row>.project-state-row-content {
+    width: 200px;
+}
+
+/* Project information - Body */
+#project-body {
+    width: 80%;
+    margin: 30px auto 30px auto;
+}
+
+/* Project information - Accordion */
+.accordion > div {
+    margin-bottom: 2rem;
+}
+
+.accordion-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 0.6rem;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    background-color: black;
+    color: white;
+
+    transition: background 0.1s;
+}
+
+.accordion-label::after {
+    content: "+";
+    
+    margin-right: 1rem;
+    transition: transform 0.4s;
+
+}
+
+.accordion-content {
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.5s;
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-input:checked ~ .accordion-content{
+    max-height: fit-content;
+}
+
+.accordion-input:checked ~ .accordion-label::after {
+    transform: rotate(-45deg);
+}
+
+/* Code snippet */
+.code-snippet-header {
+    margin: 0;
+}
+
+.code-snippet-header > p {
+    margin: 0;
+}
+
+.code-snippet-content {
+    margin: 0;
+    padding: 0;
+}

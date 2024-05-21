@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+    <!-- Metadata-->
+    <meta charset="utf-8">
+    <meta name="description" content="Syne is a first-person psychological horror game developed by HidBox Games">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syne | Sergi Monzó</title>
+
+    <!-- Style references -->
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
+    <!-- Script references -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="../js/common.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+</head>
+
+<body class="background-image-syne">
+    <div id="start-page" class="content"></div>
+    <header>
+        <div class="menu">
+            <div class="logo"><a href="../index.html#start-page">
+                    <p class="bold">Sergi Monzó</p>
+                </a></div>
+
+            <label for="menu-icon-mobile-toggle" id="menu-icon-mobile">&#9776;</label>
+            <input type="checkbox" id="menu-icon-mobile-toggle" />
+            <div class="nav-link-container">
+                <div class="nav-link"><a href="../index.html#about-me">
+                        <p>About me</p>
+                    </a></div>
+                <div class="nav-link"><a href="../index.html#my-projects">
+                        <p>My projects</p>
+                    </a></div>
+                <div class="nav-link"><a href="../index.html#my-cv">
+                        <p>Résumé</p>
+                    </a></div>
+                <div class="nav-link"><a href="../index.html#contact">
+                        <p>Contact</p>
+                    </a></div>
+            </div>
+        </div>
+
+        <div id="cover-video-wrapper" class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/IwAE4e0cfsg?playlist=IwAE4e0cfsg&autoplay=1&mute=1&loop=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </header>
+
+    <section>
+        <div id="project-info" class="backdrop-filter-blur">
+            <!-- Project title -->
+            <div class="glitchedHeading">
+                <h1 class="glitched-appear-on-scroll light-theme-heading">Syne</h1>
+                <div class="glitch-layers">
+                    <div class="glitch-layer"><h1 class="light-theme-heading">Syne</h1></div>
+                    <div class="glitch-layer"><h1 class="light-theme-heading">Syne</h1></div>
+                    <div class="glitch-layer"><h1 class="light-theme-heading">Syne</h1></div>
+                </div>
+            </div>
+            <div id="project-header">
+                <!-- Project state (table style) -->
+                <div id="project-state">
+                    <div class="project-state-row">
+                        <div class="project-state-item project-state-row-heading bold">
+                            <p class="light-theme-normal">Project status</p>
+                        </div>
+                        <div class="project-state-item project-state-row-content">
+                            <p class="light-theme-normal">Published</p>
+                        </div>
+                    </div>
+                    <div class="project-state-row">
+                        <div class="project-state-item project-state-row-heading bold">
+                            <p class="light-theme-normal">Project type</p>
+                        </div>
+                        <div class="project-state-item project-state-row-content">
+                            <p class="light-theme-normal">Group project</p>
+                        </div>
+                    </div>
+                    <div class="project-state-row">
+                        <div class="project-state-item project-state-row-heading bold">
+                            <p class="light-theme-normal">Game Engine</p>
+                        </div>
+                        <div class="project-state-item project-state-row-content">
+                            <p class="light-theme-normal">Unity</p>
+                        </div>
+                    </div>
+                    <div class="project-state-row">
+                        <div class="project-state-item project-state-row-heading bold">
+                            <p class="light-theme-normal">Languages used</p>
+                        </div>
+                        <div class="project-state-item project-state-row-content">
+                            <p class="light-theme-normal">C#</p>
+                        </div>
+                    </div>
+                    <div class="project-state-row">
+                        <div class="project-state-item project-state-row-heading bold">
+                            <p class="light-theme-normal">Primary role(s)</p>
+                        </div>
+                        <div class="project-state-item project-state-row-content">
+                            <p class="light-theme-normal">Generalist programmer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project-body">
+                <p class="light-theme-normal">
+                    Syne is a psychological horror video game, played in a first-person perspective.
+                </p>
+                <p class="light-theme-normal">
+                    My role in this project is programming almost everything. Except for the VFX related stuff, I
+                    contribute in designing the code, creating gameplay mechanics or the AI behaviour, making the audios
+                    sound where they need to sound, facilitating the level design task of customisating things on
+                    a scene with some custom editors or gizmos and providing utility to the UI elements like the game
+                    menu.
+                </p>
+                <div class="accordion light-theme-normal">
+                    <div>
+                        <input type="checkbox" name="syne-settings-accordion" id="syne-settings"
+                            class="accordion-input">
+                        <label for="syne-settings" class="accordion-label">Settings system</label>
+                        <div class="accordion-content">
+                            <p>
+                                A small example of something I have done in this project is the settings system. With
+                                this system, it is possible to interact with the UI (buttons, sliders, toggles and what
+                                I have called "selectors") and change the game configuration (for example, change the
+                                antialiasing or the audio volume).
+                            </p>
+                            <div class="accordion light-theme-normal">
+                                <input type="checkbox" name="syne-settings" id="syne-settings-snippet-isetting"
+                                    class="accordion-input">
+                                <label for="syne-settings-snippet-isetting" class="accordion-label">CODE SNIPPET [C#] -
+                                    ISetting</label>
+                                <div class="accordion-content">
+                                    <pre>
+                                        <code>
+public interface ISetting
+{
+    void SetCurrentValueFromPrevious();
+    void SetCurrentValueFromBlueprint();
+    void SetPreviousValue();
+    void SetBlueprintValue();
+    void DiscardValue();
+    void ResetValue();
+}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="accordion light-theme-normal">
+                                <input type="checkbox" name="syne-settings" id="syne-settings-snippet-antialiasing"
+                                    class="accordion-input">
+                                <label for="syne-settings-snippet-antialiasing" class="accordion-label">CODE SNIPPET
+                                    [C#] -
+                                    AntialiasingSetting</label>
+                                <div class="accordion-content">
+                                    <pre>
+                                        <code>
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
+
+public class AntialiasingSetting : MonoBehaviour, ISetting
+{
+    [SerializeField] SettingSelector[] selectors;
+
+    [SerializeField] HDAdditionalCameraData.AntialiasingMode defaultAntialias;
+    HDAdditionalCameraData.AntialiasingMode previousAntialias;
+    HDAdditionalCameraData.AntialiasingMode blueprintAntialias;
+    HDAdditionalCameraData.AntialiasingMode currentAntialias;
+    List&lt;HDAdditionalCameraData.AntialiasingMode&gt; antialiases = new List&lt;HDAdditionalCameraData.AntialiasingMode&gt;();
+
+    Camera mainCamera;
+    HDAdditionalCameraData cameraData;
+
+    /// &lt;summary&gt;
+    /// Awake is called when the script instance is being loaded.
+    /// &lt;/summary&gt;
+    void Awake()
+    {
+        GrabComponents();
+    }
+
+    /// &lt;summary&gt;
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// &lt;/summary&gt;
+    void Start()
+    {
+        SubscribeToEvents();
+        ObtainAntialiasesNames();
+        SendAntialiasesToSelector();
+        GrabValuesFromPlayerPrefs();
+        MoveSelectorTo(currentAntialias);
+        ApplySetting();
+    }
+
+    void GrabComponents()
+    {
+        mainCamera = Camera.main;
+        cameraData = mainCamera.GetComponent&lt;HDAdditionalCameraData&gt;();
+    }
+
+    void SubscribeToEvents()
+    {
+        foreach (SettingSelector selector in selectors)
+        {
+            selector.OnSelectorUpdated += SetBlueprintValue;
+        }
+    }
+
+    void DesubscribeFromEvents()
+    {
+        foreach (SettingSelector selector in selectors)
+        {
+            selector.OnSelectorUpdated -= SetBlueprintValue;
+        }
+    }
+
+    void ObtainAntialiasesNames()
+    {
+        foreach (HDAdditionalCameraData.AntialiasingMode antialiasing in Enum.GetValues(typeof(HDAdditionalCameraData.AntialiasingMode)))
+        {
+            antialiases.Add(antialiasing);
+        }
+    }
+
+    void SendAntialiasesToSelector()
+    {
+        foreach (HDAdditionalCameraData.AntialiasingMode antialiasing in Enum.GetValues(typeof(HDAdditionalCameraData.AntialiasingMode)))
+        {
+            foreach (SettingSelector selector in selectors)
+            {
+                selector.Add(antialiasing.ToString());
+            }
+        }
+    }
+
+    void MoveSelectorTo(HDAdditionalCameraData.AntialiasingMode antialiasing)
+    {
+        foreach (SettingSelector selector in selectors)
+        {
+            if (!selector.MoveTo(antialiasing.ToString()))
+            {
+                Debug.Log($&quot;Nonexistent antialiasing: {antialiasing.ToString()}&quot;);
+            }
+        }
+    }
+
+    void GrabValuesFromPlayerPrefs()
+    {
+        currentAntialias = (HDAdditionalCameraData.AntialiasingMode)PlayerPrefs.GetInt(&quot;antialiasing&quot;, (int)defaultAntialias);
+        previousAntialias = currentAntialias;
+        blueprintAntialias = currentAntialias;
+    }
+
+    void StoreSetting()
+    {
+        PlayerPrefs.SetInt(&quot;antialiasing&quot;, (int)currentAntialias);
+    }
+
+    void ApplySetting()
+    {
+        cameraData.antialiasing = currentAntialias;
+    }
+
+    /// &lt;summary&gt;
+    /// This function is called when the MonoBehaviour will be destroyed.
+    /// &lt;/summary&gt;
+    void OnDestroy() =&gt; DesubscribeFromEvents();
+
+    public void DiscardValue()
+    {
+        currentAntialias = previousAntialias;
+        blueprintAntialias = previousAntialias;
+
+        MoveSelectorTo(previousAntialias);
+    }
+
+    public void ResetValue()
+    {
+        currentAntialias = defaultAntialias;
+        previousAntialias = defaultAntialias;
+        blueprintAntialias = defaultAntialias;
+
+        MoveSelectorTo(defaultAntialias);
+        StoreSetting();
+        ApplySetting();
+    }
+
+    public void SetBlueprintValue()
+    {
+        int index = selectors[0].GetSelection();
+        blueprintAntialias = antialiases[index];
+    }
+
+    public void SetBlueprintValue(SettingSelector selector)
+    {
+        int index = selector.GetSelection();
+        blueprintAntialias = antialiases[index];
+    }
+
+    public void SetCurrentValueFromBlueprint()
+    {
+        currentAntialias = blueprintAntialias;
+        previousAntialias = blueprintAntialias;
+
+        MoveSelectorTo(blueprintAntialias);
+        StoreSetting();
+        ApplySetting();
+    }
+
+    public void SetCurrentValueFromPrevious()
+    {
+        currentAntialias = previousAntialias;
+        blueprintAntialias = previousAntialias;
+
+        MoveSelectorTo(previousAntialias);
+    }
+
+    public void SetPreviousValue()
+    {
+        int index = selectors[0].GetSelection();
+        previousAntialias = antialiases[index];
+    }
+}
+
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+/* Global */
+:root {
+    --status-blur-amount: 10px;
+    --title-backdrop-blur-amount: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 70px);
+    
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+
+    background-color: #222;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Global - text styles */
+.bold {
+    font-weight: bold;
+}
+
+.light-theme-normal {
+    color: #444;
+}
+
+.light-theme-subtle {
+    color: #777;
+}
+
+.light-theme-heading {
+    margin-top: 20px;
+    padding: 20px 20px;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    background-color: #000;
+}
+
+.dark-theme-normal {
+    color: white;
+}
+
+.dark-theme-subtle {
+    color: #CCC;
+}
+
+.dark-theme-heading {
+    margin-top: 20px;
+    padding: 20px 20px;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    background-color: #FFF;
+}
+
+
+.link {
+    color: cyan;
+}
+
+/* Header - General */
+header {
+    width: 100%;
+    margin: 0;
+}
+
+/* Header - Navigation menu */
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    margin-top: -70px;
+
+    animation: menu-appearance-animation 500ms ease-in-out 2500ms forwards;
+}
+
+#menu-icon-mobile {
+    font-size: 26px;
+    margin-right: 30px;
+
+    display: none;
+}
+
+#menu-icon-mobile-toggle {
+    display: none;
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo p {
+    text-align: center;
+
+    font-size: 20px;
+}
+
+.nav-link-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.nav-link {
+    padding: 0 10px;
+
+    text-align: center;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav-link p {
+    text-align: center;
+}
+
+.nav-link>a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-link>a:hover {
+    color: cyan;
+}
+
+/* Header - Cover videos */
+#cover-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+}
+
+#cover-video-wrapper iframe {
+    position: absolute;
+
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Attachments styles */
+.pdf-attached {
+    width: 70%;
+    height: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image slider */
+.slider-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    aspect-ratio: 16 / 9;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+}
+
+.slider-controls {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Scroll element appearance */
+.appear-on-scroll {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.appear-on-scroll.show {
+    opacity: 1;
+}
+
+/* 
+    Glitch effect: 
+*/
+
+.glitchedHeading {
+    position: relative;
+}
+
+.glitchedImage {
+    position: relative;
+}
+
+.glitchedImage > img {
+    opacity: 0;
+}
+
+.glitchedImage > img.imageHasGlitched {
+    opacity: 1;
+}
+
+.glitch-layers {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.glitch-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.glitch-layer:nth-child(1) {
+    opacity: 0;
+    transform: translate(-5%);
+    width: 100%;
+}
+
+.glitch-layer:nth-child(1) > *{
+    width: 100%;
+}
+
+.glitch-layer:nth-child(2) {
+    opacity: 0;
+    transform: translateX(3%) translateY(3%);
+    width: 100%;
+}
+
+.glitch-layer:nth-child(2) > *{
+    width: 100%;
+}
+
+.glitch-layer:nth-child(3) {
+    opacity: 0;
+    transform: translateX(-2%) translateY(-1%);
+    width: 100%;
+}
+
+.glitch-layer:nth-child(3) > *{
+    width: 100%;
+}
+
+.hasGlitched {
+    opacity: 1;
+}
+
+/* Glitch effect animation */
+@keyframes glitch-animation-1 {
+    0% {
+        opacity: 1;
+		clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
+	}
+    8% {
+		clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
+	}
+	10% {
+		clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%);
+	}
+    15% {
+		clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%);
+	}
+	20% {
+		clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%);
+	}
+	30% {
+		clip-path: polygon(0 1%, 100% 1%, 100% 9%, 0 9%);
+	}
+	40% {
+		clip-path: polygon(0 35%, 100% 35%, 100% 70%, 0 70%);
+	}
+	50% {
+		clip-path: polygon(0 45%, 100% 45%, 100% 75%, 0 75%);
+	}
+    59% {
+		clip-path: polygon(0 45%, 100% 45%, 100% 75%, 0 75%);
+	}
+	60% {
+		clip-path: polygon(0 20%, 100% 20%, 100% 25%, 0 25%);
+	}
+	70% {
+		clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+	}
+    74% {
+		clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+	}
+	80% {
+		clip-path: polygon(0 30%, 100% 30%, 100% 33%, 0 33%);
+	}
+    88% {
+		clip-path: polygon(0 30%, 100% 30%, 100% 33%, 0 33%);
+	}
+	90% {
+		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+	}
+    99% {
+        opacity: 1;
+    }
+	100% {
+        opacity: 0;
+		clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
+	}
+}
+
+@keyframes glitch-animation-2 {
+	0% {
+        opacity: 1;
+		clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
+	}
+	15% {
+		clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+	}
+	20% {
+		clip-path: polygon(0 50%, 100% 50%, 100% 60%, 0 60%);
+	}
+    27% {
+		clip-path: polygon(0 50%, 100% 50%, 100% 60%, 0 60%);
+	}
+	30% {
+		clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+	}
+    38% {
+		clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+	}
+	45% {
+		clip-path: polygon(0 45%, 100% 45%, 100% 45%, 0 45%);
+	}
+	50% {
+		clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0 100%);
+	}
+    55% {
+		clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0 100%);
+	}
+	65% {
+		clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+	}
+    71% {
+		clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+	}
+	75% {
+		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+	}
+	80% {
+		clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+	}
+    92% {
+		clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+	}
+	95% {
+		clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
+	}
+    98% {
+		clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
+	}
+    99% {
+        opacity: 1;
+    }
+	100% {
+        opacity: 0;
+		clip-path: polygon(0 11%, 100% 11%, 100% 15%, 0 15%);
+	}
+}
+
+@keyframes glitch-animation-3 {
+	0% {
+        opacity: 1;
+		clip-path: polygon(100% 100%, 100% 100%, 100% 95%, 0 95%);
+	}
+    5% {
+		clip-path: polygon(100% 100%, 100% 100%, 100% 95%, 0 95%);
+	}
+	15% {
+        clip-path: polygon(100% 60%, 100% 60%, 100% 80%, 0 80%);
+	}
+    18% {
+        clip-path: polygon(100% 60%, 100% 60%, 100% 80%, 0 80%);
+	}
+	25% {
+        clip-path: polygon(100% 40%, 100% 40%, 100% 45%, 0 45%);
+	}
+    28% {
+        clip-path: polygon(100% 40%, 100% 40%, 100% 45%, 0 45%);
+	}
+	30% {
+        clip-path: polygon(100% 30%, 100% 30%, 100% 40%, 0 40%);
+	}
+    37% {
+        clip-path: polygon(100% 30%, 100% 30%, 100% 40%, 0 40%);
+	}
+	45% {
+        clip-path: polygon(100% 65%, 100% 65%, 100% 68%, 0 68%);
+	}
+    48% {
+        clip-path: polygon(100% 65%, 100% 65%, 100% 68%, 0 68%);
+	}
+	50% {
+        clip-path: polygon(100% 42%, 100% 42%, 100% 45%, 0 45%);
+	}
+    54% {
+        clip-path: polygon(100% 42%, 100% 42%, 100% 45%, 0 45%);
+	}
+	65% {
+        clip-path: polygon(100% 74%, 100% 74%, 100% 78%, 0 78%);
+	}
+    70% {
+        clip-path: polygon(100% 74%, 100% 74%, 100% 78%, 0 78%);
+	}
+	75% {
+        clip-path: polygon(100% 20%, 100% 20%, 100% 35%, 0 35%);
+	}
+	80% {
+        clip-path: polygon(100% 80%, 100% 80%, 100% 87%, 0 87%);
+	}
+    85% {
+        clip-path: polygon(100% 80%, 100% 80%, 100% 87%, 0 87%);
+	}
+	95% {
+        clip-path: polygon(100% 50%, 100% 50%, 100% 53%, 0 53%);
+	}
+    99% {
+        opacity: 1;
+    }
+	100% {
+        opacity: 0;
+        clip-path: polygon(100% 62%, 100% 62%, 100% 66%, 0 66%);
+	}
+}
+
+/* Scroll content animation */
+/* Animations */
+@keyframes scroll-content-animation {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -400px;
+    }
+}
+
+/* Media queries */
+@media only screen and (max-width: 621px) {
+    /* Navigation menu for mobile devices */
+    #menu-icon-mobile {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    .nav-link-container {
+        text-align: center;
+        width: 100%;
+
+        display: none;
+    }
+
+    .nav-link 
+    {
+        display: block;
+        width: 100%;
+    }
+
+    #menu-icon-mobile-toggle:checked + .nav-link-container {
+        display: flex;
+        flex-flow: row wrap;
+
+        height: fit-content;
+    }
+}
+
+
+/* Animations */
+@keyframes menu-appearance-animation {
+    0% {
+        margin-top: -70px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+/* Scroll appearance animation */
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+/* Browser compatibility */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .menu {
+        backdrop-filter: blur(10px);
+    }
+
+    .backdrop-filter-blur {
+        backdrop-filter: blur(10px);
+    }
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .menu {
+        backdrop-filter: blur(10px);
+    }
+
+    .backdrop-filter-blur {
+        backdrop-filter: blur(10px);
+    }
+}
