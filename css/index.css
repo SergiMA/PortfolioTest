@@ -70,17 +70,17 @@ video {
 }
 
 .grid-container {
-    width: 80%;
+    width: 85%;
     margin: 10px auto auto auto;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    grid-auto-rows: 1fr;
     justify-content: space-around;
     gap: 20px;
 }
 
 .grid-item {
-    min-height: 500px;
     width: 300px;
 
     margin-bottom: 30px;
@@ -171,17 +171,10 @@ video {
 }
 
 .project-item-title {
-    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 1em;
+
     text-align: center;
-    padding: 20px 0;
-    backdrop-filter: blur(var(--title-backdrop-blur-amount));
     font-size: 18px;
-
-    position: absolute;
-    width: 300px;
-    bottom: 0;
-
-    pointer-events: none;
 }
 
 .project-item-content {
